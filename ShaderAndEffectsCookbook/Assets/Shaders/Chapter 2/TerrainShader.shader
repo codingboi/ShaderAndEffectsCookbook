@@ -1,4 +1,4 @@
-﻿Shader "CookbookShaders/TerrainShader" {
+﻿Shader "CookbookShaders/Chapter 2/TerrainShader" {
 	Properties{
 		_MainTint("Color", Color) = (1,1,1,1)
 		_ColorA("Color A", Color) = (1,1,1,1)

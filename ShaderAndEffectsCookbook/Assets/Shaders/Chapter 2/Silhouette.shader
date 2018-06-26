@@ -1,4 +1,4 @@
-﻿Shader "CookbookShaders/Silhouette" {
+﻿Shader "CookbookShaders/Chapter 2/Silhouette" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_DotProduct("Rim Effect", Range(-1,1)) = 0

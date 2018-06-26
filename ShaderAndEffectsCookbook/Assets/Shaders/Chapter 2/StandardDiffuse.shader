@@ -1,4 +1,4 @@
-﻿Shader "CookbookShaders/StandardDiffuse" {
+﻿Shader "CookbookShaders/Chapter 2/StandardDiffuse" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_AmbientColor ("Ambient Color", Color) = (1,1,1,1)

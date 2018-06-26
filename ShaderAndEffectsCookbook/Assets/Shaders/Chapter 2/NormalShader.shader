@@ -1,4 +1,4 @@
-﻿Shader "CookbookShaders/NormalShader" {
+﻿Shader "CookbookShaders/Chapter 2/NormalShader" {
 	Properties {
 		_Tint ("Tint", Color) = (1,1,1,1)
 		_NormalMap("Normal Map", 2D) = "bump" {}

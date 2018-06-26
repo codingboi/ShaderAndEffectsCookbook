@@ -1,4 +1,4 @@
-﻿Shader "CookbookShaders/RadiusShader" {
+﻿Shader "CookbookShaders/Chapter 2/RadiusShader" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}

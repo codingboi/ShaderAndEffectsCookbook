@@ -1,4 +1,4 @@
-﻿Shader "CookbookShaders/TexturedShader" {
+﻿Shader "CookbookShaders/Chapter 2/TexturedShader" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
