@@ -9,14 +9,6 @@
 		CGPROGRAM
 		#pragma surface surf SimpleLambert
 
-		half4 LightingSimpleLambert(SurfaceOutput s, half3 lightDir, half atten) {
-			half NdotL = dot(s.Normal, lightDir);
-			half4 c;
-			c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten);
-			c.a = s.Alpha;
-			return c;
-		}
-
 		sampler2D _MainTex;
 
 		struct Input {
@@ -29,6 +21,14 @@
 			o.Albedo = tex2D(_MainTex, IN.uv_MainTex);
 		}
 
+		half4 LightingSimpleLambert(SurfaceOutput s, half3 lightDir, half atten) {
+			half NdotL = dot(s.Normal, lightDir);
+			half4 c;
+			// the more orthogonal the light direction relative to the face, the more light there will be
+			c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten);
+			c.a = s.Alpha;
+			return c;
+		}
 		
 		ENDCG
 	}
