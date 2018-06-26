@@ -9,7 +9,7 @@
 
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Lambert alpha:fade nolighting
+		#pragma surface surf Lambert alpha:fade 
 
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
@@ -29,6 +29,9 @@
 			float border = 1 - abs(dot(IN.worldNormal, IN.viewDir));
 			// Metallic and smoothness come from slider variables
 			float alpha = (border * (1 - _DotProduct) + _DotProduct);
+			//equivalent to above line :
+			//float alpha = lerp(border, 1, _DotProduct);
+			alpha = saturate(alpha);
 			o.Alpha = c.a * alpha;
 		}
 		ENDCG
