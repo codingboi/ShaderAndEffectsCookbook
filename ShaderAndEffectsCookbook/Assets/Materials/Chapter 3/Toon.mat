@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SimpleLambert
+  m_Name: Toon
   m_Shader: {fileID: 4800000, guid: 85208b57463246941aa5671d95231b19, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
