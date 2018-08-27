@@ -35,6 +35,7 @@
 
 			void vert(inout appdata_full v) {
 				// sampling the noise texture
+				// using tex2Dlod because we're in the vert function and can't use tex2D
 				float3 disp = tex2Dlod(_NoiseTex, float4(v.texcoord.xy, 0, 0));
 				// _Period determines the frequency of the sinus function (and thus the movement of the explosion)
 				// disp determines the phase of the sinus, which offsets the movement depending on the whiteness of the pixel sampled on the texture

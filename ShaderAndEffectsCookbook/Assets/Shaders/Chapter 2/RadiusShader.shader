@@ -33,13 +33,12 @@
 		float _RadiusWidth;
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
-			// Albedo comes from a texture tinted by color
 			float dist = distance(_Center, IN.worldPos);
 			float4 c;
 
 			if (dist > _Radius && dist < _RadiusWidth + _Radius) {
 				o.Albedo = _RadiusColor;
-			}
+			}	
 			else
 				o.Albedo = tex2D(_MainTex, IN.uv_MainTex) * _Color;
 		}

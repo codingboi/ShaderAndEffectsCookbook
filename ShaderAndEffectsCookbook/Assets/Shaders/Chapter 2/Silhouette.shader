@@ -8,10 +8,8 @@
 		LOD 200
 
 		CGPROGRAM
-		// Physically based Standard lighting model, and enable shadows on all light types
 		#pragma surface surf Lambert alpha:fade 
 
-		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
 
 		struct Input {
@@ -27,7 +25,6 @@
 			fixed4 c = _Color;
 			o.Albedo = c.rgb;
 			float border = 1 - abs(dot(IN.worldNormal, IN.viewDir));
-			// Metallic and smoothness come from slider variables
 			float alpha = (border * (1 - _DotProduct) + _DotProduct);
 			//equivalent to above line :
 			//float alpha = lerp(border, 1, _DotProduct);
