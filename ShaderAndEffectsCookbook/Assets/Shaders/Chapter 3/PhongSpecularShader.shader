@@ -39,7 +39,7 @@
 			// computing the reflection vector by projecting the light direction vector on the Normal
 			// explainations :
 			// - https://www.3dkingdoms.com/weekly/weekly.php?a=2
-			// - https://www.fabrizioduroni.it/2017/08/25/how-to-calculate-reflection-vector.html (division by the vector length squared omitted in vector projection formula because the normal vector is a unit vector)
+			// - https://www.fabrizioduroni.it/2017/08/25/how-to-calculate-reflection-vector.html (division by the vector length squared omitted in vector projection below because the normal vector is a unit vector)
 			// - https://en.wikipedia.org/wiki/Vector_projection#Vector_projection_3
 			float reflectionVector = normalize(2.0 * i.Normal * NDotL - lightDir);
 			// the more aligned the reflection vector and the view direction, the more the specular light is strong
