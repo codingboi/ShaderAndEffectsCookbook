@@ -38,7 +38,7 @@
 			// this effectively replaces the reflection vector in the Phong specular shader for much less computing cost
 			// it's the half vector (ie, halfway between the view direction and light direction)
 			half3 halfVector = normalize(viewDir + lightDir);
-			// we dot the normal with the half vector instead of the view vector with the light vector
+			// we dot the normal with the half vector instead of the view vector with the reflection vector (i.e what is done in the phong model)
 			float NDotH = max(0, dot(i.Normal, halfVector));
 			float spec = pow(NDotH, _SpecPower);
 
